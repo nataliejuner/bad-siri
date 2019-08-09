@@ -5,7 +5,7 @@ class Input extends React.Component {
 		return (
 			<>
 				<h2>Hello, {this.props.name}. {this.props.request}</h2>
-				<input type="text" defaultValue="" placeholder="Wutcha want? Butts?" onChange={this.props.siri} />
+				<input id='question' type="text" defaultValue="" placeholder="Wutcha want? Butts?" onChange={this.props.siri} />
 			</>
 		)
 	}

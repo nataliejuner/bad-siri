@@ -1,3 +1,15 @@
+html, body {
+  min-height: 100%;
+}
+
+body {
+  background-color: #fff;
+  background-image: linear-gradient(135deg, #fff 45%, transparent 115%), linear-gradient(135deg, #fff 75%, #eeeffc 75% 85%, #d0d2f2 85% 95%, #b6b9f2 95%);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  margin: 0;
+}
+
 .App {
   color: #333;
   font-size: 18px;
@@ -8,6 +20,15 @@
 h1 span {
   animation: rotate 7s linear infinite;
   position: absolute;
+}
+
+a {
+  color: #7f5dce;
+  text-decoration: none;
+}
+
+a:hover, a:active, a:focus {
+  color: #ce5d5d;
 }
 
 @keyframes rotate {
@@ -26,9 +47,25 @@ input {
   color: inherit;
   font-size: inherit;
   padding: 15px 20px;
+  transition: border .25s ease-in-out, box-shadow .25s ease-in-out;
+}
+
+input:hover {
+  border-color: rgba(55,55,55,0.8);
+  box-shadow: 0 15px 10px -10px rgba(236, 5, 120, 0.01), 0 20px 20px -10px rgba(5, 22, 236, 0.1);
 }
 
 input:focus {
   border-color: rgba(5, 22, 236, 0.4);
+  box-shadow: 0 10px 10px -10px rgba(236, 5, 120, 0.02), 0 15px 20px -10px rgba(5, 22, 236, 0.2);
   outline: none;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+	font-size: 14px;
+  text-align: center;
 }
