@@ -1,3 +1,31 @@
+html, body {
+  min-height: 100%;
+}
+
+body {
+  background-color: #fefefe;
+  background-image: linear-gradient(135deg, #fefefe 45%, transparent 115%), linear-gradient(135deg, #fefefe 75%, #eeeffc 75% 85%, #d0d2f2 85% 95%, #b6b9f2 95%);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  line-height: 1.5;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+}
+
+.container {
+	margin: 40px auto;
+	width: 100%;
+}
+
+@media (min-width: 1200px) {
+	.container {
+		width: 1200px;
+	}
+}
+
 .App {
   color: #333;
   font-size: 18px;
@@ -5,17 +33,67 @@
   text-align: center;
 }
 
+h1 a {
+  color: #333;
+  font-size: 100px;
+}
+
+h1 em {
+  color: #7f5dce;
+  font-style: normal;
+  font-size: 0.4em;
+  line-height: 1;
+  position: absolute;
+  transform: translate(-70%,6%) rotate(-45deg)
+}
+
 h1 span {
   animation: rotate 7s linear infinite;
+  font-size: 75px;
+  line-height: 1;
   position: absolute;
+}
+
+h6 {
+  line-height: 1;
+  position: relative;
+}
+
+h6 em {
+  color: #7f5dce;
+  font-style: normal;
+  /* font-size: 0.4em; */
+  line-height: 1;
+  position: absolute;
+  transform: translate(-26%,-94%) rotate(-20deg);
+}
+
+/*
+¯\_(ツ)_/¯
+oh yeah true....
+so smol
+hmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm 
+I dunno cuz now it looks like a link
+i duno
+lawl
+*/
+
+
+a {
+  color: #7f5dce;
+  text-decoration: none;
+}
+
+a:hover, a:active, a:focus {
+  color: #ff6363;
 }
 
 @keyframes rotate {
   from {
-    transform: translateX(10px) rotateZ(0deg)
+    transform: translate(10px,20px) rotateZ(0deg)
   }
   to {
-    transform: translateX(10px) rotateZ(360deg)
+    transform: translate(10px,20px) rotateZ(360deg)
   }
 }
 
@@ -26,9 +104,48 @@ input {
   color: inherit;
   font-size: inherit;
   padding: 15px 20px;
+  transition-property: border, box-shadow;
+  transition-duration: .5s;
+  transition-timing-function: linear;
+}
+
+input:hover {
+  border-color: rgba(55,55,55,0.8);
+  box-shadow: 0 15px 10px -10px rgba(236, 5, 120, 0.01), 0 20px 20px -10px rgba(5, 22, 236, 0.1);
 }
 
 input:focus {
   border-color: rgba(5, 22, 236, 0.4);
+  box-shadow: 0 10px 10px -10px rgba(236, 5, 120, 0.02), 0 15px 20px -10px rgba(5, 22, 236, 0.2);
   outline: none;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+	font-size: 14px;
+  text-align: center;
+}
+
+
+/* temp */
+input {
+  border-color: rgba(5, 22, 236, 0.2);
+}
+
+input:hover {
+  border-color: rgba(5, 22, 236, 0.4);
+}
+
+input:focus {
+  border-color: rgba(255, 99, 99, 0.4);
+  box-shadow: 0 10px 10px -10px rgba(255, 99, 99, 0.02), 0 15px 20px -10px rgba(255, 99, 99, 0.1);
+}
+
+/* glow */
+
+input:focus {
+  box-shadow: 0 0 30px 0 rgba(255, 99, 99, 0.2);
 }
